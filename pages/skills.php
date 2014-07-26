@@ -63,8 +63,6 @@ $langs = array(
         <li>MySQL</li>
         <li>Microsoft SQL Server</li>
         <li>SQLite</li>
-        <li>Mongo DB</li>
-        <li></li>
     </ul>
     <h5>NoSQL Databases</h5>
     <ul>
