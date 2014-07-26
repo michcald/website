@@ -38,7 +38,7 @@ $records = array(
         'start' => 'Aug 2012',
         'end' => 'Mar 2013',
         'position' => 'Software Engineer Researcher',
-        'description' => 'Short term project in an international PhD students group regarding a branch of the HCI (Human-Computer Interaction) with a focus on: <strong>Distributed Software Development</strong> and <strong>Usability evaluation of software applications</strong>',
+        'description' => 'Short term project in an international PhD students group regarding a branch of the HCI (Human-Computer Interaction) with a focus on: <ul><li>Distributed Software Development</li><li>Usability evaluation of software applications</li></ul>',
         'links' => array(
             array(
                 'key' => 'UCI',
@@ -72,10 +72,12 @@ $records = array(
 
 <link href="pub/css/work.css" rel="stylesheet">
 
-<div class="row">
+<div class="col-md-2"></div>
+
+<div class="col-md-8">
     <div class="timeline-centered">
         <? foreach ($records as $record): ?>
-	<article class="timeline-entry <?= $record['align'] ?>">
+	<article class="timeline-entry">
             <div class="timeline-entry-inner">
 		<time class="timeline-time" datetime="">
                     <span><?= $record['end'] ?></span>
@@ -85,11 +87,11 @@ $records = array(
                     <i class="entypo-feather"></i>
 		</div>
                 <div class="timeline-label">
-                    <h2>
-                        <a href='#'><?= $record['title'] ?></a>
-                    </h2>
-                    <blockquote><small><?= $record['position'] ?></small></blockquote>
-                    <p><?= $record['description'] ?></p>
+                    <h3>
+                        <?= $record['title'] ?>
+                    </h3>
+                    <blockquote><?= $record['position'] ?></blockquote>
+                    <div><?= $record['description'] ?></div>
                     <? if (count($record['links']) > 0): ?>
                     <br />
                     <ul>

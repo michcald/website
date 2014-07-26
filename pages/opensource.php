@@ -16,7 +16,7 @@ $records = array(
                 'value' => 'https://github.com/michcald/opensimulatorapi'
             ),
         ),
-        'class' => 'offer-default'
+        'class' => 'offer-success'
     ),
     array(
         'label' => 'JS',
@@ -28,7 +28,7 @@ $records = array(
                 'value' => 'https://bitbucket.org/michcald/wysiwyg-html-editor'
             ),
         ),
-        'class' => 'offer-primary'
+        'class' => 'offer-danger'
     ),
     array(
         'label' => 'PHP',
@@ -52,7 +52,7 @@ $records = array(
                 'value' => 'https://github.com/michcald/mvc'
             ),
         ),
-        'class' => 'offer-warning'
+        'class' => 'offer-success'
     ),
     array(
         'label' => 'PHP',
@@ -68,7 +68,7 @@ $records = array(
                 'value' => 'https://github.com/michcald/inspectweb'
             ),
         ),
-        'class' => 'offer-danger'
+        'class' => 'offer-success'
     ),
     array(
         'label' => 'JS',
@@ -80,7 +80,7 @@ $records = array(
                 'value' => 'https://github.com/michcald/local-storage-wrapper'
             ),
         ),
-        'class' => 'offer-primary'
+        'class' => 'offer-danger'
     ),
     array(
         'label' => 'C',
@@ -92,7 +92,7 @@ $records = array(
                 'value' => 'https://bitbucket.org/michcald/table-compiler'
             ),
         ),
-        'class' => 'offer-danger'
+        'class' => 'offer-warning'
     ),
     array(
         'label' => 'PHP',
@@ -110,27 +110,30 @@ $records = array(
 
 ?>
 
-<div class="container">
-    <h3>
-        All of my projects on my github and bitbucket accounts
-    </h3>
-    <div class="col-xs-6 col-md-3">
-        <a href="https://github.com/michcald" class="thumbnail" target="_blank">
-            <img src="pub/img/github.jpeg" />
+<ul class="nav nav-pills nav-justified">
+    <li>
+        <a class="btn btn-social" href="https://github.com/michcald" target="_blank" alt="Github" title="Github">
+            <span class="fa fa-github fa-3x"></span>
+            <h3>My Github</h3>
         </a>
-    </div>
-    <div class="col-xs-6 col-md-3">
-        <a href="https://bitbucket.org/michcald" class="thumbnail" target="_blank">
-            <img src="pub/img/bitbucket.png" />
+    </li>
+    <li>
+        <a class="btn btn-social" href="https://bitbucket.org/michcald" target="_blank" alt="Bitbucket" title="Bitbucket">
+            <span class="fa fa-bitbucket fa-3x"></span>
+            <h3>My Bitbucket</h3>
         </a>
-    </div>
-</div>
+    </li>
+</ul>
 
 <hr />
 
+<h2>
+    Some of my projects
+</h2>
+
 <div class="row">
     <? foreach ($records as $record): ?>
-    <div class="col-xs-12 col-sm-7 col-md-5 col-lg-4">
+    <div class="col-md-12">
         <div class="offer <?= $record['class'] ?>">
             <div class="shape">
                 <div class="shape-text">
