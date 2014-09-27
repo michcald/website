@@ -1,0 +1,35 @@
+{% spaceless %}
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li{% if selected == 'home' %} class="active"{% endif %}>
+            <a href="{{ url('website.index.index') }}">
+                <span class="glyphicon glyphicon-home"></span> Home
+            </a>
+        </li>
+        <li{% if selected == 'blog' %} class="active"{% endif %}>
+            <a href="{{ url('website.blog.index') }}">
+                <span class="glyphicon glyphicon-book"></span> Blog
+            </a>
+        </li>
+        <li{% if selected == 'wiki' %} class="active"{% endif %}>
+            <a href="{{ url('website.wiki.index') }}">
+                <span class="glyphicon glyphicon-paperclip"></span> Wiki
+            </a>
+        </li>
+        <li{% if selected == 'open_source' %} class="active"{% endif %}>
+            <a href="{{ url('website.index.open_source') }}">
+                <span class="glyphicon glyphicon-th-large"></span> Open Source
+            </a>
+        </li>
+        <li{% if selected == 'about_me' %} class="active"{% endif %}>
+            <a href="{{ url('website.index.about_me') }}">
+                <span class="glyphicon glyphicon-user"></span> About me
+            </a>
+        </li>
+        <li{% if selected == 'contact_me' %} class="active"{% endif %}>
+            <a href="{{ url('website.index.contact_me') }}">
+                <span class="glyphicon glyphicon-envelope"></span> Contact me
+            </a>
+        </li>
+    </ul>
+    <br />
+{% endspaceless %}

@@ -1,0 +1,16 @@
+{% extends 'wiki/layout.html.twig' %}
+
+{% block content %}
+    
+    <p>
+        {{ item.created }}
+    </p>
+    <p>
+        {{ item.updated }}
+    </p>
+    <h3>
+        {{ item.title }}
+    </h3>
+    {{ item.body|raw }}
+    
+{% endblock %}

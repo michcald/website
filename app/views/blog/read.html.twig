@@ -1,0 +1,30 @@
+{% extends 'blog/layout.html.twig' %}
+
+{% block content %}
+    <p class="text-right">
+        <a href="javascript:history.go(-1)">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+            Back to the list
+        </a>
+    </p>
+    
+    <h2 class="text-center">
+        {{ post.title }}
+    </h2>
+    
+    <p class="text-center">
+        Published the {{ post.published|date('d/m/Y, H:i') }}
+    </p>
+    
+    {{ post.body|raw }}
+    
+    <br /><br />
+    
+    <p class="text-right">
+        <a href="javascript:history.go(-1)">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+            Back to the list
+        </a>
+    </p>
+    
+{% endblock %}

@@ -1,0 +1,4 @@
+dummy:
+    endpoint: dummy.dev/dummy-client/pub/app_dev.php
+    token: ~
+    

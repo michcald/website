@@ -1,0 +1,61 @@
+{% extends 'layout.html.twig' %}
+
+{% block navbar %}
+    {{ navbar('home') }}
+{% endblock %}
+
+{% block page %}
+    
+    <blockquote>
+        <p>ciao</p>
+    </blockquote>
+    
+    {% if posts|length > 0 %}
+        <h2 class="page-header">
+            From the blog
+            <small>Highlighted posts</small>
+        </h2>
+        {% for post in posts %}
+            <div>
+                
+                <h3>
+                    <a href="{{ url('website.blog.read', {
+                        id: post.id,
+                        title: post.title|lower|blankToDash,
+                        date: post.published|date('Y-m-d')
+                    }) }}">
+                        {{ post.title }}
+                    </a>
+                </h3>
+                    
+                
+
+                <p>
+                    {% if post.body|length > 400 %}
+                        {{ post.body|striptags[:400] }}...
+                    {% else %}
+                        {{ post.body|striptags }}
+                    {% endif %}
+                    <a href="{{ url('website.blog.read', {
+                        id: post.id,
+                        title: post.title|lower|blankToDash,
+                        date: post.published|date('Y-m-d')
+                    }) }}">
+                        Continue reading
+                    </a>
+                </p>
+                
+                <p class="well">
+                    
+                    Published the {{ post.published|date('d/m/Y, H:i') }}
+                
+                    | Category: <a href="">PHP</a> | Replies 0
+                </p>
+                
+            </div>
+                
+                        <br />
+        {% endfor %}
+    {% endif %}
+    
+{% endblock %}

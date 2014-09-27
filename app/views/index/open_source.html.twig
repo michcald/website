@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+
+{% block navbar %}
+    {{ navbar('open_source') }}
+{% endblock %}
+
+{% block page %}
+    <div>
+        {{ page.body|raw }}
+    </div>
+    <hr />
+    <div class="text-center small">
+        Last update: {{ page.updated|date('d/m/Y') }}
+    </div>
+{% endblock %}

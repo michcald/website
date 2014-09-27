@@ -1,0 +1,89 @@
+routes:
+
+    # index
+    
+    - name: website.index.index
+      methods: ["GET"]
+      uri:
+          pattern: ~
+          requirements: []
+      controller: \Michcald\Website\Controller\IndexController
+      action: indexAction
+    
+    - name: website.index.about_me
+      methods: ["GET"]
+      uri:
+          pattern: about-me
+          requirements: []
+      controller: \Michcald\Website\Controller\IndexController
+      action: aboutMeAction
+      
+    - name: website.index.open_source
+      methods: ["GET"]
+      uri:
+          pattern: open-source
+          requirements: []
+      controller: \Michcald\Website\Controller\IndexController
+      action: openSourceAction
+
+    - name: website.index.contact_me
+      methods: ["GET"]
+      uri:
+          pattern: contact-me
+          requirements: []
+      controller: \Michcald\Website\Controller\IndexController
+      action: contactMeAction
+      
+    - name: website.blog.index
+      methods: ["GET"]
+      uri:
+          pattern: blog
+          requirements: []
+      controller: \Michcald\Website\Controller\BlogController
+      action: indexAction
+    
+    - name: website.blog.read
+      methods: ["GET"]
+      uri:
+          pattern: blog/{id}/{date}/{title}
+          requirements:
+              - param: id
+                value: \d+
+              - param: date
+                value: .*
+              - param: title
+                value: .*
+      controller: \Michcald\Website\Controller\BlogController
+      action: readAction
+      
+    - name: website.wiki.index
+      methods: ["GET"]
+      uri:
+          pattern: wiki
+          requirements: []
+      controller: \Michcald\Website\Controller\WikiController
+      action: indexAction
+    
+    - name: website.wiki.read
+      methods: ["GET"]
+      uri:
+          pattern: wiki/{id}/{title}
+          requirements:
+              - param: id
+                value: \d+
+              - param: title
+                value: .*
+      controller: \Michcald\Website\Controller\WikiController
+      action: readAction
+      
+    # default
+    
+    - name: website.index.not_found
+      methods: ["GET","POST","PUT","DELETE","OPTIONS","PATCH","HEAD"]
+      uri:
+          pattern: "{any}"
+          requirements:
+              - param: any
+                value: ".*"
+      controller: \Michcald\Website\Controller\IndexController
+      action: notFoundAction
