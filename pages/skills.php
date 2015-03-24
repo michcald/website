@@ -61,7 +61,6 @@ $langs = array(
     <h5>Relational Databases</h5>
     <ul>
         <li>MySQL</li>
-        <li>Microsoft SQL Server</li>
         <li>SQLite</li>
     </ul>
     <h5>NoSQL Databases</h5>
@@ -78,5 +77,22 @@ $langs = array(
         <li>Symfony2</li>
         <li>Zend Framework 2</li>
         <li>PHPUnit</li>
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <h2>Dev ops</h2>
+    <ul>
+        <li>Salt stack</li>
+        <li>Capistrano</li>
+        <li>Capifony</li>
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <h2>Other</h2>
+    <ul>
+        <li>Redis</li>
+        <li>Beanstalkd</li>
     </ul>
 </div>
